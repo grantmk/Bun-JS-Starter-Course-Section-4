@@ -2,13 +2,16 @@
 <hr>
 
 <div style="text-align: center;">
-  <h2 id="title">Add a Pokemon to the database {{temp}}:</h2>
+  <h2 id="title">Add a Pokemon to the database:</h2>
   <form>
     <label for="pname">Pokemon name:</label><br>
     <input type="text" id="pname" name="pname"><br>
     <label for="plevel">Level:</label><br>
-    <input type="text" id="plevel" name="plevel">
+    <input type="number" id="plevel" name="plevel">
+    <input type="submit" value="Add to Pokedex">
   </form>
+
+  <button onclick="setTitle()">Title</button>
 </div>
 
 <hr>
@@ -18,6 +21,11 @@
 </div>
 
 <script>
-  let temp = "p";
-  document.querySelector('#title').innerHTML = temp
+
+
+
+  function setTitle() {
+    let temp = "p";
+    document.querySelector('#title').innerHTML = temp
+  }
 </script>
