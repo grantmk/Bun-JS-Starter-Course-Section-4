@@ -1,8 +1,6 @@
 import { Elysia, t } from "elysia";
-import { nameCaseFix } from "./plugins/pokename"
 
 const app = new Elysia()
-  .use(nameCaseFix)
   .get("/", () => Bun.file('./public/index.html'))
   .get('/id/:id', ({ params: { id } }) => id + " is a " + typeof (id), {
     params: t.Object({
